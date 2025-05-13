@@ -11,7 +11,10 @@ docker pull quay.io/jupyter/all-spark-notebook
 
 Start docker with
 
-xxxx
+docker run -p 8888:8888 -p 4040:4040 \
+  -v "/Users/nemmen/Dropbox/industry/study/DS/spark-getting-started:/home/jovyan/work" \
+  --name all-spark \
+  quay.io/jupyter/all-spark-notebook
 
 
 ## Notebooks
