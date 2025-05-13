@@ -5,6 +5,8 @@ Jupyter notebooks meant to be run in [Databricks](https://www.databricks.com). C
 
 Notebooks based on the [Getting started with Apache Spark on Databricks tutorial](https://www.databricks.com/spark/getting-started-with-apache-spark).
 
+Alternatively, you can run these locally
+
 Docker image
 
 docker pull quay.io/jupyter/all-spark-notebook
