@@ -42,6 +42,6 @@ Open an address like http://localhost:8888/lab?token=605809399c43cf30f3df2c04d93
 
 [Notebook 4](4-Spark%20ML%20library.ipynb): Fitting a linear model with the machine learning library.
 
-[Notebook 5](5-XGBoost.ipynb): XGBoost.
+[Notebook 5](5-Streaming.ipynb): Structured streaming—handling streaming datasets.
 
 
