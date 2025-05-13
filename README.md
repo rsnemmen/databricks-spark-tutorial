@@ -1,17 +1,22 @@
 Getting started with databricks and Apache Spark
 =================================================
 
-Notebooks based on the [Getting started with Apache Spark on Databricks tutorial](https://www.databricks.com/spark/getting-started-with-apache-spark). The idea is to explore the capabilities of Databricks and expose some Apache Spark features.
+Notebooks that can be run locally or on [Databricks](https://www.databricks.com) illustrating: 
 
-These Jupyter notebooks are meant to be run in [Databricks](https://www.databricks.com). Create a free account and run these notebooks there. 
+- Running an Apache Spark job
+- Using the Dataframe and MLlib APIs
+- Fitting a simple regression model
+- Handling streaming datasets
+
+Based on the [Getting started with Apache Spark on Databricks tutorial](https://www.databricks.com/spark/getting-started-with-apache-spark). 
 
 ## Running Spark locally
 
-However, when running a "serverless compute" databricks instance many of the commands will not run. For example, you will not be able to use scala commands or perform fits (notebooks 3 and 4). In that case, you should run the notebooks locally as follows.
+When running a "serverless compute" databricks instance on the free tier, many of the commands will not run. For example, you will not be able to use scala commands, perform fits or continuously generate a time series (notebooks 3-4). In that case, you should run the notebooks locally as follows.
 
-(1) Pull a good Docker image
+(1) Pull a good Docker image.
 
-I suggest this one which comes with a full installation of spark and jupyter lab:
+I suggest the `all-spark-notebook` one which comes with a full installation of spark and jupyter lab:
 
     docker pull quay.io/jupyter/all-spark-notebook
 
@@ -23,12 +28,11 @@ docker run -p 8888:8888 -p 4040:4040 \
   --name all-spark quay.io/jupyter/all-spark-notebook
 ```
 
-This will map port 8888 from the container to your host machine for accessing Jupyter Lab. Port  4040 maps to the Spark Application UI. 
+This will map port 8888 from the container to your host machine for accessing Jupyter Lab. Port  4040 maps to the Spark Application UI. Take note of an address like http://localhost:8888/lab?token=605809399c43cf30f3df2c04d936597cccb06db22444f028 that will show up.
+
+(3) Open Jupyter Lab in your browser.
 
 
-(3) Open Jupyter Lab
-
-Open an address like http://localhost:8888/lab?token=605809399c43cf30f3df2c04d936597cccb06db22444f028 in your browser.
 
 
 
