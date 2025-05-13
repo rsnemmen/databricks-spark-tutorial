@@ -17,7 +17,7 @@ I suggest this one which comes with a full installation of spark and jupyter lab
 
 (2) Start a Docker container with
 
-```
+```shell
 docker run -p 8888:8888 -p 4040:4040 \
   -v "/path/to/these/notebooks:/home/jovyan/work" \
   --name all-spark quay.io/jupyter/all-spark-notebook
