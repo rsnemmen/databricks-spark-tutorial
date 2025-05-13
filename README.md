@@ -26,6 +26,12 @@ docker run -p 8888:8888 -p 4040:4040 \
 This will map port 8888 from the container to your host machine for accessing Jupyter Lab. Port  4040 maps to the Spark Application UI. 
 
 
+(3) Open Jupyter Lab
+
+Open an address like http://localhost:8888/lab?token=605809399c43cf30f3df2c04d936597cccb06db22444f028 in your browser.
+
+
+
 ## Notebooks
 
 [Notebook 1](1-My%20first%20Apache%20Spark%20job.ipynb): Running your first Apache Spark job.
