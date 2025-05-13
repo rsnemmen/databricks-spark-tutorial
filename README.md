@@ -1,33 +1,40 @@
 Getting started with databricks and Apache Spark
 =================================================
 
-Jupyter notebooks meant to be run in [Databricks](https://www.databricks.com). Create a free account there and run these notebooks to get familiarized with the platform and its capabilities.
+Notebooks based on the [Getting started with Apache Spark on Databricks tutorial](https://www.databricks.com/spark/getting-started-with-apache-spark). The idea is to explore the capabilities of Databricks and expose some Apache Spark features.
 
-Notebooks based on the [Getting started with Apache Spark on Databricks tutorial](https://www.databricks.com/spark/getting-started-with-apache-spark).
+These Jupyter notebooks are meant to be run in [Databricks](https://www.databricks.com). Create a free account and run these notebooks there. 
 
-Alternatively, you can run these locally
+## Running Spark locally
 
-Docker image
+However, when running a "serverless compute" databricks instance many of the commands will not run. For example, you will not be able to use scala commands or perform fits (notebooks 3 and 4). In that case, you should run the notebooks locally as follows.
 
-docker pull quay.io/jupyter/all-spark-notebook
+(1) Pull a good Docker image
 
-Start docker with
+I suggest this one which comes with a full installation of spark and jupyter lab:
 
+    docker pull quay.io/jupyter/all-spark-notebook
+
+(2) Start a Docker container with
+
+```
 docker run -p 8888:8888 -p 4040:4040 \
-  -v "/Users/nemmen/Dropbox/industry/study/DS/spark-getting-started:/home/jovyan/work" \
-  --name all-spark \
-  quay.io/jupyter/all-spark-notebook
+  -v "/path/to/these/notebooks:/home/jovyan/work" \
+  --name all-spark quay.io/jupyter/all-spark-notebook
+```
+
+This will map port 8888 from the container to your host machine for accessing Jupyter Lab. Port  4040 maps to the Spark Application UI. 
 
 
 ## Notebooks
 
-[Notebook 1](1-basics,%20ARIMA.ipynb): EDA, naive, ACF, PACF, (S)AR(I)MA.
+[Notebook 1](1-My%20first%20Apache%20Spark%20job.ipynb): Running your first Apache Spark job.
 
-[Notebook 2](2-ML,%20linear%20model.ipynb): prepare data for pytorch, linear model.
+[Notebook 2](2-Dataframe,%20SQL%20queries.ipynb): Creating a dataframe, running a SQL query.
 
-[Notebook 3](3_RNN_and_more—need_NVIDIA_GPU.ipynb): RNN, deep RNN, multivariate/multitarget, seq2vec, uncertainty band.
+[Notebook 3](3-Create%20sample%20data,%20process%20and%20visualize.ipynb): Create sample data, process and visualize with Scala.
 
-[Notebook 4](4_LSTM—need_NVIDIA_GPU.ipynb): LSTM, GRU, CNN, wavenet.
+[Notebook 4](4-Spark%20ML%20library.ipynb): Fitting a linear model with the machine learning library.
 
 [Notebook 5](5-XGBoost.ipynb): XGBoost.
 
